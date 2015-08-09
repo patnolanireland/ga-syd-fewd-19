@@ -1,0 +1,12 @@
+article {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
