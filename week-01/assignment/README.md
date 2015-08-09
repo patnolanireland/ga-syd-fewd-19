@@ -9,7 +9,7 @@
 ###Description
 
 
-For the first assignment, you will begin creating the beginnings of your first website. Take what you've learned from class and build a portfolio site that showcases all of the projects you'll be completing over the next few weeks. Build two pages - an 'About Page' and a 'Portfolio' - that link to one another. Your 'About Page' should describe your mission and value proposition and your 'Portfolio' should include [screenshots](starter_code/images) with descriptions of the work you [will] do for Relaxr, Startup Matchmaker, and CitiPix. Don't worry if you can't come up with any text for the pages--we've provided you with [some sample copy](starter_code/sample_copy.txt) that you can use.
+For the first assignment, you will begin creating the beginnings of your first website. Take what you've learned from class and build a portfolio site that showcases all of the projects you'll be completing over the next few weeks. Build two pages - an 'About Page' and a 'Portfolio' - that link to one another. Your 'About Page' should describe your mission and value proposition and your 'Portfolio' should include [screenshots](starter-code/images) with descriptions of the work you [will] do for Relaxr, Startup Matchmaker, and CitiPix. Don't worry if you can't come up with any text for the pages--we've provided you with [some sample copy](starter-code/sample_copy.txt) that you can use.
 
 <br>
 
@@ -56,7 +56,7 @@ For the first assignment, you will begin creating the beginnings of your first w
 
 - NOTE: There is **no starter code** for this assignment (only starter text), but a **sample** solution is [provided](solution).  Students will build this assignment from scratch and should feel free to get creative with regard to layout, color, styling, etc.
 
-- Slides from [class 1](../01_html_basics/slides.md) and [class 2](../02_css_basics/slides.md).
+- Slides from [class 1](http://patnolanireland.github.io/fewd-curriculum/week1/html-basics/dist/index.htm) and [class 2](http://patnolanireland.github.io/fewd-curriculum/week1/css-basics/dist/index.html#/).
 
 Here are examples of a simple "About" and "Portfolio" page that fulfill the assignment requirements:
 
