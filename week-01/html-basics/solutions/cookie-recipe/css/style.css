@@ -1,0 +1,17 @@
+/* This is a comment in my css file */
+body {
+    background-color: #FFE;
+}
+
+/* The requirements are that the color be this kind of dark grey */
+h4 {
+    color: #887;
+}
+
+a {
+    color: #900;
+}
+
+img {
+    border: 1px solid black;
+}
