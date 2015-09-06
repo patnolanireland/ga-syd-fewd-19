@@ -1,0 +1,807 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+/* For IE 6/7 (triggers hasLayout) */
+.cf {
+  *zoom:1;
+}
+
+/* We can give our body a min and max width to add a little fluidity to our design */
+body {
+    min-width: 780px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    background: #eee;
+    min-height: 100px;
+    /* here we use a new unit of measure called Viewport height vh.
+    ** The fact that we have defined the min-height in pixels above will
+    ** provide a fall back for older browsers*/
+    min-height: 10vh;
+    margin: 1% 0;
+}
+
+/* The header with the class nav */
+header.nav {
+    background: #fff;
+    /* We will set a min-height for the logo of 180px.
+    ** Setting a line-height of the same will allow us to vertically center the nav.
+    ** with the caveat that if it grows beyond 180px we won't have vertical center but
+    ** it should look pretty good none the less. */
+    line-height: 180px;
+}
+
+.logo {
+    min-height: 180px;
+    width: 25%;
+    float: left;
+}
+
+header nav,
+.menu {
+    width: 75%;
+    float: left;
+    text-align: right;
+}
+
+.logo,
+.menu a,
+header nav a {
+    background-color: #eee;
+    text-decoration: none;
+}
+
+.menu {
+    display: none;
+}
+
+.menu a {
+    position: relative;
+    font-size: 48px;
+    text-decoration: none;
+}
+
+.menu a,
+header nav a {
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    /* Setting a line-height equal to the height will allow us to get vertical center */
+    line-height: 80px;
+    margin-right: 1%;
+    text-align: center;
+}
+
+header nav a:last-of-type {
+    margin-right: 0;
+}
+
+/* All of our column containers will share the following characteristics */
+[class*="column"] {
+    margin: 1% 0;
+    width: 100%;
+}
+
+[class^="col-"] {
+    float: left;
+    padding: 2%;
+}
+
+/* In order to get our equal height columns working with a 1% gutter we need to do a slight correction to the padding.
+** When we create our fake background we go 0.5% either side of the column to create a fake 1% white strip which will
+** put out all our subsequent column padding by half a percent.  The following selector corrects all but the first column
+**/
+[class*="columns"] [class^="col-"]:not(:first-child) {
+    padding-left: 2.5%;
+}
+
+/* .ct is used as shorthand for container */
+.ct {
+    background: #fff;
+    padding: 0 0 0 1%;
+}
+
+.ct header {
+    margin: 0;
+}
+
+/* This is a hack for IE8 Behaviour which positions the 
+** linear gradient background ontop of the containers 
+** background.
+*/
+.ct [class*="column"] {
+    position:relative;
+    z-index:1
+}
+
+/* A good example of where we need the extra specificity of the parent to get our poker hand to beat the
+** [class*="columns"] [class^="col-"]:not(:first-child) defined above
+**/
+[class*="columns"] [class^="col-"].ct {
+    padding-left: 0.5%;
+}
+
+/* Remove the bottom margin when we are placing columns within columns */
+[class*="columns"] [class^="col-"].ct :last-child {
+    margin-bottom: 0;
+}
+
+.primary-content {
+    min-height: 650px;
+    /* here we use a new unit of measure called Viewport height vh.
+    ** The fact that we have defined the min-height in pixels above will
+     ** provide a fall back for older browsers*/
+    min-height: 75vh;
+}
+
+.secondary-content {
+    min-height: 250px;
+    /* here we use a new unit of measure called Viewport height vh.
+    ** The fact that we have defined the min-height in pixels above will
+     ** provide a fall back for older browsers*/
+    min-height: 25vh;
+}
+
+.lead {
+    min-height: 400px;
+    /* here we use a new unit of measure called Viewport height vh.
+    ** The fact that we have defined the min-height in pixels above will
+     ** provide a fall back for older browsers*/
+    min-height: 40vh;
+}
+
+/* Create the faux background images with linear gradients */
+.one-column {
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(0, #eee),
+            color-stop(100%, #eee)
+    );
+    background-image: -webkit-linear-gradient(
+            left,
+            #eee,
+            #eee 100%
+    );
+    background-image: -moz-linear-gradient(
+            left,
+            #eee,
+            #eee 100%
+    );
+    background-image: -ms-linear-gradient(
+            left,
+            #eee,
+            #eee 100%
+    );
+    background-image: -o-linear-gradient(
+            left,
+            #eee,
+            #eee 100%
+    );
+    -pie-background: linear-gradient(
+            left,
+            #eee,
+            #eee 100%
+    );
+
+    /* Add the Internet Explorer Polyfill */
+    behavior: url(js/vendor/PIE-1.0.0/PIE.htc);
+}
+
+/* Create the faux background images with linear gradients */
+/* 1:2 Ratio with 1% gutter i.e. 99 / 2 = 45.5 */
+.two-columns-1-2 {
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(0, #eee),
+            color-stop(49.5%, #eee),
+            color-stop(49.5%, #fff),
+            color-stop(50.5%, #fff),
+            color-stop(50.5%, #eee),
+            color-stop(100%, #eee)
+    );
+    background-image: -webkit-linear-gradient(
+            left,
+            #eee,
+            #eee 49.5%,
+            #fff 49.5%,
+            #fff 50.5%,
+            #eee 50.5%,
+            #eee 100%
+    );
+    background-image: -moz-linear-gradient(
+            left,
+            #eee,
+            #eee 49.5%,
+            #fff 49.5%,
+            #fff 50.5%,
+            #eee 50.5%,
+            #eee 100%
+    );
+    background-image: -ms-linear-gradient(
+            left,
+            #eee,
+            #eee,
+            #eee 49.5%,
+            #fff 49.5%,
+            #fff 50.5%,
+            #eee 50.5%,
+            #eee 100%
+    );
+    background-image: -o-linear-gradient(
+            left,
+            #eee,
+            #eee 49.5%,
+            #fff 49.5%,
+            #fff 50.5%,
+            #eee 50.5%,
+            #eee 100%
+    );
+    -pie-background: linear-gradient(
+            left,
+            #eee,
+            #eee 49.5%,
+            #fff 49.5%,
+            #fff 50.5%,
+            #eee 50.5%,
+            #eee 100%
+    );
+
+    /* Add the Internet Explorer Polyfill */
+    behavior: url(js/vendor/PIE-1.0.0/PIE.htc);
+}
+
+/* Create the faux background images with linear gradients */
+/* 2:3 Ratio with 1% gutter i.e. 99 / 3 * 2 = 66 and 99 / 3 * 1 = 33 */
+.two-columns-2-3 {
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(0, #eee),
+            color-stop(66%, #eee),
+            color-stop(66%, #fff),
+            color-stop(67%, #fff),
+            color-stop(67%, #eee),
+            color-stop(100%, #eee)
+    );
+    background-image: -webkit-linear-gradient(
+            left,
+            #eee,
+            #eee 66%,
+            #fff 66%,
+            #fff 67%,
+            #eee 67%,
+            #eee 100%
+    );
+    background-image: -moz-linear-gradient(
+            left,
+            #eee,
+            #eee 66%,
+            #fff 66%,
+            #fff 67%,
+            #eee 67%,
+            #eee 100%
+    );
+    background-image: -ms-linear-gradient(
+            left,
+            #eee,
+            #eee,
+            #eee 66%,
+            #fff 66%,
+            #fff 67%,
+            #eee 67%,
+            #eee 100%
+    );
+    background-image: -o-linear-gradient(
+            left,
+            #eee,
+            #eee 66%,
+            #fff 66%,
+            #fff 67%,
+            #eee 67%,
+            #eee 100%
+    );
+    -pie-background: linear-gradient(
+            left,
+            #eee,
+            #eee 66%,
+            #fff 66%,
+            #fff 67%,
+            #eee 67%,
+            #eee 100%
+    );
+
+    /* Add the Internet Explorer Polyfill */
+    behavior: url(js/vendor/PIE-1.0.0/PIE.htc);
+}
+
+.two-columns-3-1 {
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(0, #eee),
+            color-stop(74.75%, #eee),
+            color-stop(74.75%, #fff),
+            color-stop(75.75%, #fff),
+            color-stop(75.75%, #eee),
+            color-stop(100%, #eee)
+    );
+    background-image: -webkit-linear-gradient(
+            left,
+            #eee,
+            #eee 74.75%,
+            #fff 74.75%,
+            #fff 75.75%,
+            #eee 75.75%,
+            #eee 100%
+    );
+    background-image: -moz-linear-gradient(
+            left,
+            #eee,
+            #eee 74.25%,
+            #fff 74.25%,
+            #fff 75.25%,
+            #eee 75.25%,
+            #eee 100%
+    );
+    background-image: -ms-linear-gradient(
+            left,
+            #eee,
+            #eee 74.25%,
+            #fff 74.25%,
+            #fff 75.25%,
+            #eee 75.25%,
+            #eee 100%
+    );
+    background-image: -o-linear-gradient(
+            left,
+            #eee,
+            #eee 74.25%,
+            #fff 74.25%,
+            #fff 75.25%,
+            #eee 75.25%,
+            #eee 100%
+    );
+    -pie-background: linear-gradient(
+            left,
+            #eee,
+            #eee 74.25%,
+            #fff 74.25%,
+            #fff 75.25%,
+            #eee 75.25%,
+            #eee 100%
+    );
+
+    /* Add the Internet Explorer Polyfill */
+    behavior: url(js/vendor/PIE-1.0.0/PIE.htc);
+}
+
+/* Create the faux background images with linear gradients */
+/* 1:4 Ratio with 1% gutter i.e. 99 / 5 = 19.8 */
+.two-columns-1-4 {
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(0, #eee),
+            color-stop(19.8%, #eee),
+            color-stop(19.8%, #fff),
+            color-stop(20.8%, #fff),
+            color-stop(20.8%, #eee),
+            color-stop(100%, #eee)
+    );
+    background-image: -webkit-linear-gradient(
+            left,
+            #eee,
+            #eee 19.8%,
+            #fff 19.8%,
+            #fff 20.8%,
+            #eee 20.8%,
+            #eee 100%
+    );
+    background-image: -moz-linear-gradient(
+            left,
+            #eee,
+            #eee 19.8%,
+            #fff 19.8%,
+            #fff 20.8%,
+            #eee 20.8%,
+            #eee 100%
+    );
+    background-image: -ms-linear-gradient(
+            left,
+            #eee,
+            #eee 19.8%,
+            #fff 19.8%,
+            #fff 20.8%,
+            #eee 20.8%,
+            #eee 100%
+    );
+    background-image: -o-linear-gradient(
+            left,
+            #eee,
+            #eee 19.8%,
+            #fff 19.8%,
+            #fff 20.8%,
+            #eee 20.8%,
+            #eee 100%
+    );
+    -pie-background: linear-gradient(
+            left,
+            #eee,
+            #eee 19.8%,
+            #fff 19.8%,
+            #fff 20.8%,
+            #eee 20.8%,
+            #eee 100%
+    );
+
+
+    /* Add the Internet Explorer Polyfill */
+    behavior: url(js/vendor/PIE-1.0.0/PIE.htc);
+}
+
+
+/* Create the faux background images with linear gradients */
+/* 3 Columns with a 1% gutter in the ratio of 1:1:1
+**
+** 100 - 2 = 98 (i.e. two gutters )
+** 98 / 3 = 32.666666667 (don't worry about the big numbers let the browser worry about it)
+*/
+.three-columns-1-1-1 {
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(0, #eee),
+            color-stop(32.666666667%, #eee),
+            color-stop(32.666666667%, #fff),
+            color-stop(33.666666667%, #fff),
+            color-stop(33.666666667%, #eee),
+            color-stop(66.333333334%, #eee),
+            color-stop(66.333333334%, #fff),
+            color-stop(67.333333334%, #fff),
+            color-stop(67.333333334%, #eee),
+            color-stop(100%, #eee)
+    );
+    background-image: -webkit-linear-gradient(
+            left,
+            #eee,
+            #eee 32.666666667%,
+            #fff 32.666666667%,
+            #fff 33.666666667%,
+            #eee 33.666666667%,
+            #eee 66.333333334%,
+            #fff 66.333333334%,
+            #fff 67.333333334%,
+            #eee 67.333333334%,
+            #eee 100%
+    );
+    background-image: -moz-linear-gradient(
+            left,
+            #eee,
+            #eee 32.666666667%,
+            #fff 32.666666667%,
+            #fff 33.666666667%,
+            #eee 33.666666667%,
+            #eee 66.333333334%,
+            #fff 66.333333334%,
+            #fff 67.333333334%,
+            #eee 67.333333334%,
+            #eee 100%
+    );
+    background-image: -ms-linear-gradient(
+            left,
+            #eee,
+            #eee 32.666666667%,
+            #fff 32.666666667%,
+            #fff 33.666666667%,
+            #eee 33.666666667%,
+            #eee 66.333333334%,
+            #fff 66.333333334%,
+            #fff 67.333333334%,
+            #eee 67.333333334%,
+            #eee 100%
+    );
+    background-image: -o-linear-gradient(
+            left,
+            #eee,
+            #eee 32.666666667%,
+            #fff 32.666666667%,
+            #fff 33.666666667%,
+            #eee 33.666666667%,
+            #eee 66.333333334%,
+            #fff 66.333333334%,
+            #fff 67.333333334%,
+            #eee 67.333333334%,
+            #eee 100%
+    );
+    -pie-background: linear-gradient(
+            left,
+            #eee,
+            #eee 32.666666667%,
+            #fff 32.666666667%,
+            #fff 33.666666667%,
+            #eee 33.666666667%,
+            #eee 66.333333334%,
+            #fff 66.333333334%,
+            #fff 67.333333334%,
+            #eee 67.333333334%,
+            #eee 100%
+    );
+
+    /* Add the Internet Explorer Polyfill */
+    behavior: url(js/vendor/PIE-1.0.0/PIE.htc);
+}
+
+/* Create the faux background images with linear gradients */
+/* 3 Columns with a 1% gutter in the ratio of 1:5 3:5 1:5 i.e 98 / 5 = 19.6 and 98 / 5 * 3 = 58.8 */
+.three-columns-1-3-1 {
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(0, #eee),
+            color-stop(19.6%, #eee),
+            color-stop(19.6%, #fff),
+            color-stop(20.6%, #fff),
+            color-stop(20.6%, #eee),
+            color-stop(79.4%, #eee),
+            color-stop(79.4%, #fff),
+            color-stop(80.4%, #fff),
+            color-stop(80.4%, #eee),
+            color-stop(100%, #eee)
+    );
+    background-image: -webkit-linear-gradient(
+            left,
+            #eee,
+            #eee 19.6%,
+            #fff 19.6%,
+            #fff 20.6%,
+            #eee 20.6%,
+            #eee 79.4%,
+            #fff 79.4%,
+            #fff 80.4%,
+            #eee 80.4%,
+            #eee 100%
+    );
+    background-image: -moz-linear-gradient(
+            left,
+            #eee,
+            #eee 19.6%,
+            #fff 19.6%,
+            #fff 20.6%,
+            #eee 20.6%,
+            #eee 79.4%,
+            #fff 79.4%,
+            #fff 80.4%,
+            #eee 80.4%,
+            #eee 100%
+    );
+    background-image: -ms-linear-gradient(
+            left,
+            #eee,
+            #eee 19.6%,
+            #fff 19.6%,
+            #fff 20.6%,
+            #eee 20.6%,
+            #eee 79.4%,
+            #fff 79.4%,
+            #fff 80.4%,
+            #eee 80.4%,
+            #eee 100%
+    );
+    background-image: -o-linear-gradient(
+            left,
+            #eee,
+            #eee 19.6%,
+            #fff 19.6%,
+            #fff 20.6%,
+            #eee 20.6%,
+            #eee 79.4%,
+            #fff 79.4%,
+            #fff 80.4%,
+            #eee 80.4%,
+            #eee 100%
+    );
+    -pie-background: linear-gradient(
+            left,
+            #eee,
+            #eee 19.6%,
+            #fff 19.6%,
+            #fff 20.6%,
+            #eee 20.6%,
+            #eee 79.4%,
+            #fff 79.4%,
+            #fff 80.4%,
+            #eee 80.4%,
+            #eee 100%
+    );
+
+    /* Add the Internet Explorer Polyfill */
+    behavior: url(js/vendor/PIE-1.0.0/PIE.htc);
+
+}
+
+/* Create the faux background images with linear gradients */
+/* 4 Columns with a 1% gutter in the ratio of 1:4 i.e.  */
+.four-columns-1-1-1-1 {
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            color-stop(0, #eee),
+            color-stop(24.25%, #eee),
+            color-stop(24.25%, #fff),
+            color-stop(25.25%, #fff),
+            color-stop(25.25%, #eee),
+            color-stop(49.5%, #eee),
+            color-stop(49.5%, #fff),
+            color-stop(50.5%, #fff),
+            color-stop(50.5%, #eee),
+            color-stop(74.75%, #eee),
+            color-stop(74.75%, #fff),
+            color-stop(75.75%, #fff),
+            color-stop(75.75%, #eee),
+            color-stop(100%, #eee)
+    );
+    background-image: -webkit-linear-gradient(
+            left,
+            #eee,
+            #eee 24.25%,
+            #fff 24.25%,
+            #fff 25.25%,
+            #eee 25.25%,
+            #eee 49.75%,
+            #fff 49.75%,
+            #fff 50.75%,
+            #eee 50.75%,
+            #eee 74.75%,
+            #fff 74.75%,
+            #fff 75.75%,
+            #eee 75.75%,
+            #eee 100%
+    );
+
+    background-image: -moz-linear-gradient(
+            left,
+            #eee,
+            #eee 24.25%,
+            #fff 24.25%,
+            #fff 25.25%,
+            #eee 25.25%,
+            #eee 49.75%,
+            #fff 49.75%,
+            #fff 50.75%,
+            #eee 50.75%,
+            #eee 74.75%,
+            #fff 74.75%,
+            #fff 75.75%,
+            #eee 75.75%,
+            #eee 100%
+    );
+    background-image: -ms-linear-gradient(
+            left,
+            #eee,
+            #eee 24.25%,
+            #fff 24.25%,
+            #fff 25.25%,
+            #eee 25.25%,
+            #eee 49.75%,
+            #fff 49.75%,
+            #fff 50.75%,
+            #eee 50.75%,
+            #eee 74.75%,
+            #fff 74.75%,
+            #fff 75.75%,
+            #eee 75.75%,
+            #eee 100%
+    );
+    background-image: -o-linear-gradient(
+            left,
+            #eee,
+            #eee 24.25%,
+            #fff 24.25%,
+            #fff 25.25%,
+            #eee 25.25%,
+            #eee 49.75%,
+            #fff 49.75%,
+            #fff 50.75%,
+            #eee 50.75%,
+            #eee 74.75%,
+            #fff 74.75%,
+            #fff 75.75%,
+            #eee 75.75%,
+            #eee 100%
+    );
+    -pie-background: linear-gradient(
+            left,
+            #eee,
+            #eee 24.25%,
+            #fff 24.25%,
+            #fff 25.25%,
+            #eee 25.25%,
+            #eee 49.75%,
+            #fff 49.75%,
+            #fff 50.75%,
+            #eee 50.75%,
+            #eee 74.75%,
+            #fff 74.75%,
+            #fff 75.75%,
+            #eee 75.75%,
+            #eee 100%
+    );
+
+    /* Add the Internet Explorer Polyfill */
+    behavior: url(js/vendor/PIE-1.0.0/PIE.htc);
+}
+
+/* Here we can start to make our own attempt at a grid type layout.  Once the overall container can provide a width
+** we can use percentages to great effect.  Feel free to add your own to the mix to come up with your own super simple
+** CSS Grid based system.  */
+
+.col-1-2 {
+    width: 50%;
+}
+
+.col-1-3 {
+    width: 33.33%;
+}
+
+.col-1-4 {
+    width: 25%;
+}
+
+.col-1-5 {
+    width: 20%;
+}
+
+.col-2-3 {
+    width: 66.66%;
+    float: left;
+    padding: 2%;
+}
+
+.col-3-4 {
+    width: 75%;
+}
+
+.col-3-5 {
+    width: 60%;
+}
+
+.col-4-5 {
+    width: 80%;
+}
+
+/* Just a taster of what is to come with media queries */
+@media screen and (max-width: 960px)  {
+    header nav {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+}
