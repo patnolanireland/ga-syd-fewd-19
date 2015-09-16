@@ -26,4 +26,4 @@ Project URL: ____________________________________
 | Have the `p` slide up and hide the "Read Less" link using,`$.slideUp()` and `$.hide()` | --- | --- | --- |
 | Show the "Read More" link using `$.show()`| --- | --- | --- |
 | Using the same functions as above, if a user clicks the "Learn More" link in the sidebar, have the `your tag` inside that `your tag` slide down and hide the "Learn More" link using `$.slideDown()` and `$.hide()` | --- | --- | --- |
-|TOTAL: ______/16| --- | --- | --- |
+|TOTAL: ______/14| --- | --- | --- |
