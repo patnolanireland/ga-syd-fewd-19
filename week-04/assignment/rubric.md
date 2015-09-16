@@ -7,10 +7,13 @@
 
 
 The team from Relaxr is back...again! They want their page to be more interactive and asked you to add JavaScript to
-their source code. You've been given the HTML and CSS but will need to create a JavaScript file and add a few different
-pieces of interactivity:  Users should be able to click a link and have the remainder of the blog's content slide down
-and appear on the page, both on the main content column and the side bar; users should also be able hide the content
-when they are finished reading. See a detailed technical explanation below.
+their source code. You've been given the HTML and CSS which you can choose to use or continue with your own code from
+Assignemnt 3 adding in the initially hidden "read more" content present in the starter code.  In any case you will 
+need to create a JavaScript file and add a few different pieces of interactivity:  Users should be able to click a 
+link and have the remainder of the blog's content slide downand appear on the page, both on the main content column 
+and the side bar; users should also be able hide the content and appear on the page, both on the main content column 
+and the side bar; users should also be able hide the content when they are finished reading. See a detailed technical 
+explanation below.
 
 Student: ________________________________________
 
