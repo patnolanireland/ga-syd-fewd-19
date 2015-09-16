@@ -53,7 +53,8 @@ The team from Relaxr is back...again! They want their page to be more interactiv
 
 - [Starter Code](http://patnolanireland.github.io/fewd-curriculum/week4/intro-to-jquery/dist/resources/relaxr-blog-part-3.zip)
 - [Cheat-sheet of jQuery selectors, methods, and events](http://oscarotero.com/jquery/)
-
+- [Try jQuery](http://try.jquery.com/)
+- [Code Academy](https://www.codecademy.com/tracks/jquery)
 
 <br>
 
@@ -62,11 +63,11 @@ The team from Relaxr is back...again! They want their page to be more interactiv
 ###Evaluation / Submission
 
 
-Students should use the same folder and GitHub repository as the previous project ("homework-landingpage"), if that is what they called it. 
+Students can choose to use the same folder and GitHub repository as the previous project ("homework-blog"), if that is what they called it. 
 Alternatively the starter code can be used and students are free to create a new repository if they so wish.  
 When ready for evaluation they should push their code to that repository and notify the instructional team via Schoology. 
-Instructional team should evaluate against the solution code and the student's use of technical elements. They will provide a numeric grade on a scale: does not meet expectations (0); meets expectations (1); exceeds expectations (2). **Note**: If bullets have child bullets, grade the child bullets and not the parent bullet belonging to the child. The maximum possible score on this assignment is 16/16. Bonus materials are completely optional.
+Instructional team should evaluate against the solution code and the student's use of technical elements. They will provide a numeric grade on a scale: does not meet expectations (0); meets expectations (1); exceeds expectations (2). **Note**: If bullets have child bullets, grade the child bullets and not the parent bullet belonging to the child. The maximum possible score on this assignment is 14/14. Bonus materials are completely optional.
 
-###Final Project Milestone 1
+###Final Project Milestone 1 (hard deadline)
 
 By this week, you should have created and handed in wireframes that sketch out your idea and basic design for a final project.
