@@ -97,6 +97,6 @@ Students should start by using the [starter code](starter-code/) and focus on ad
 
 ###Final Project Milestone 1
 
-By week 5, you should have submitted a proposal and wireframes for your final project. Next up, you'll be writing pseudo code for the interactivity you would like to add.  For this week, you should begin writing psuedo code and a draft of the HTML/CSS for your application - this should be turned into your instructor by the end of week 7.
+By week 5, you should have submitted a proposal and wireframes for your final project. Next up, you'll be writing the first draft of your HTML (No CSS at the is stage) then the pseudo code for the interactivity you would like to add.  For this week, you should begin writing psuedo code and a draft of the HTML/CSS for your application - this should be turned into your instructor by the end of week 7.
 
 
