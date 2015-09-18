@@ -63,7 +63,7 @@ After entering "NYC" and submitting:
 
 See the screenrecording for the app in operation
 
-![Deliverable](https://dl.dropboxusercontent.com/u/23062704/ga/video/citi-pix.m4v)
+[Deliverable](https://dl.dropboxusercontent.com/u/23062704/ga/video/citi-pix.m4v)
 
 
 
