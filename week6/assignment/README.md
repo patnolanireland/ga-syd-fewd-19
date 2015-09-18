@@ -7,7 +7,7 @@
 ###Description 
 
 
-JavaScript is powerful: we're able to take user interaction and information and use it to update the page without requiring a refresh. This week, a new startup in your city, CitiPix, is looking to create a personalized picture app that allows users to store pictures they've taken around the world and quickly access them by typing in keywords or tags associated with each photo; they have asked for your help to start building the front-end prototype. You will begin by building a web-app that will take a user's input and update the background image of the page based on that input. Once again, you have been given the starter code that includes the HTML and the CSS. Use the images in the [images folder](starter_code/images) and write JavaScript to make the background image reflect user input based on the Technical Requirements  below.
+JavaScript is powerful: we're able to take user interaction and information and use it to update the page without requiring a refresh. This week, a new startup in your city, CitiPix, is looking to create a personalized picture app that allows users to store pictures they've taken around the world and quickly access them by typing in keywords or tags associated with each photo; they have asked for your help to start building the front-end prototype. You will begin by building a web-app that will take a user's input and update the background image of the page based on that input. Once again, you have been given the starter code that includes the HTML and the CSS. Use the images in the [images folder](starter-code/images) and write JavaScript to make the background image reflect user input based on the Technical Requirements  below.
 
 
 <br>
@@ -83,7 +83,7 @@ NOTE: You will have to add these images to your ```images``` folder
 
 ###Resources
 
-- [Starter Code and Assets](starter_code/)
+- [Starter Code and Assets](starter-code/)
 - [JavaScript docs on comparison operators](http://www.w3schools.com/js/js_comparisons.asp)
 - [JavaScript docs on variables](http://www.w3schools.com/js/js_variables.asp)
 
@@ -95,7 +95,7 @@ NOTE: You will have to add these images to your ```images``` folder
 
 ###Evaluation / Submission
 
-Students should start by using the [starter code](starter_code/) and focus on adding the proper JavaScript to update the background of the page. Students will create a new repository on GitHub called "homework-city" and push their code to it when they are ready to submit. Instructional team should evaluate against the solution code and the student's fulfillment of technical requirements. Instructional team will provide a numeric grade on a scale for each technical requirement: does not meet expectations (0); meets expectations (1); exceeds expectations (2). **Note**: If bullet points have child bullets, grade the child bullets and not the parent bullet belonging to the child. The maximum possible score on this assignment is 28/28. Bonus materials are completely optional.
+Students should start by using the [starter code](starter-code/) and focus on adding the proper JavaScript to update the background of the page. Students will create a new repository on GitHub called "homework-city" and push their code to it when they are ready to submit. Instructional team should evaluate against the solution code and the student's fulfillment of technical requirements. Instructional team will provide a numeric grade on a scale for each technical requirement: does not meet expectations (0); meets expectations (1); exceeds expectations (2). **Note**: If bullet points have child bullets, grade the child bullets and not the parent bullet belonging to the child. The maximum possible score on this assignment is 28/28. Bonus materials are completely optional.
 
 ###Final Project Milestone 1
 
