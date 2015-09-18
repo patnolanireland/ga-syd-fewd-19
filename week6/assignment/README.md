@@ -61,9 +61,7 @@ After entering "NYC" and submitting:
 
 ![Deliverable](starter-code/images/citipix_solution_nyc.png)
 
-See the screenrecording for the app in operation
-
-[Deliverable](https://dl.dropboxusercontent.com/u/23062704/ga/video/citi-pix.m4v)
+[Click here to see a screenrecording of the app in operation](https://dl.dropboxusercontent.com/u/23062704/ga/video/citi-pix.m4v)
 
 
 
