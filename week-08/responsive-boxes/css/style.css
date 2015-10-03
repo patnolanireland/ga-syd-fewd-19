@@ -1,0 +1,111 @@
+/* Paul Irish box-sizing to correct the box model*/
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    width: 100%;
+    border: 0.0625em solid black; /* 1 / 16 */
+}
+#container,
+ul,
+nav,
+body,
+html {
+    border: none;
+}
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+#container {
+    width: 90%;
+    margin: 0 auto;
+}
+/*Navigation*/
+nav li {
+    width: 15%;
+    height: 2.5em; /* 40 / 16 */
+    float: left;
+    margin: 0.625em; / 10 / 16 */
+}
+nav li:first-child { /* the hamburger li */
+    float: right;
+    display: none;
+}
+.line {
+    height: 0.4375em; /* 7 / 16 */
+    width: 60%;
+    margin: 0.3125em auto; /* 5 / 16 */
+    border-radius: 0.3125em; /* 5 / 16 */
+}
+/*Main content and footer*/
+
+header+div { /* select all div's that are immedialey after the header element */
+    height: 25em; /* 400 / 16 */
+    margin: 1.25em 0; /* 20 / 16 */
+}
+#container>div+div, /* select all divs that have a div immediatley before and is inside the element with the id container */
+footer>div { /* select all div's that have the footer as a parent element */
+    width: 30%;
+    height: 12.5em; /* 200 / 16 */
+    float: left;
+    margin: 1% 1.5%;
+}
+footer {
+    clear: left;
+}
+@media screen and (max-width: 768px) {
+    /*Navigation*/
+    nav li {
+        display: none;
+        margin: 1.5%;
+    }
+    nav li:first-child { /* the hamburger li */
+        display: block;
+        width: 30%;
+    }
+    .menu-expanded li {
+        display: block;
+        width: 97%;
+    }
+    /*Main and footer*/
+    #container>div+div, /* select all divs that have a div immediatley before and is inside the element with the id container */
+    footer>div {
+        width: 97%;
+        /*100%-3% margins*/
+    }
+}

@@ -1,0 +1,45 @@
+.cf, .cf:before {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    content: "";
+    display: table;
+}
+
+.scoreboard {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 0 15px 15px;
+    border: 1px solid black;
+    background: #eee;
+}
+
+.scoreboard table,
+.scoreboard th,
+.scoreboard td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.game .inputs {
+    margin: 0 auto;
+}
+
+#results {
+    display: none;
+}
+
+a {
+    cursor: pointer;
+    float: left;
+}
